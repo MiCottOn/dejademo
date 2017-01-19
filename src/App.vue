@@ -1,5 +1,6 @@
 <template>
-  <div id="parent">
+  <div>
+    <demoHeader></demoHeader>
     <div class="container">
       <demo-new-post @postAdded="newPost"></demo-new-post>
       <demo-post-list :posts="posts" :count="postCount"></demo-post-list>
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import Header from './components/Header.vue';
 import PostList from './components/PostList.vue';
 import NewPost from './components/NewPost.vue';
 
@@ -15,21 +17,20 @@ export default {
   name: 'app',
   data: function() {
     return {
-      posts: [
-
-      ],
+      posts: [],
       postCount: 0, 
     }
   },
   methods: {
     newPost(post) {
-      this.posts.unshift({message: post, comments: []});
+      this.posts.unshift(post);
       this.postCount++;
     }
   },
   components: {
     demoPostList: PostList,
-    demoNewPost: NewPost
+    demoNewPost: NewPost,
+    demoHeader: Header
   }
 }
 </script>
