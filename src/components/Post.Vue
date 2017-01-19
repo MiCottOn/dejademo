@@ -2,20 +2,45 @@
   <div class="post">
     <slot></slot>
     <div class="post-option">
-      <a href="#">Comments</a>
+      <a href="#" @click="showComments">Comments ({{commentCount}})</a>
     </div>
-    <div class="comments">
-      <div class="comment">
-        
-      </div>
-    </div>
+    <template v-if="visible">
+      <demo-comment-list :comments="commentList" :commentcount="commentCount"></demo-comment-list>
+      <demo-new-comment @commentAdded="newComment"></demo-new-comment>
+    </template>
   </div> 
 </template>
 
 <script>
+  import CommentList from './CommentsList.vue';
+  import NewComment from './NewComment.vue';
 
+  export default {
+    data: function() {
+      return {
+        visible: false,
+        commentList: [],
+        commentCount: 0
+      }
+    },
+    props: ['comments'],
+    methods: {
+      showComments() {
+        if (this.visible) this.visible = false;
+        else this.visible = true
+      }, 
+      newComment(comment) {
+        this.commentList.push(comment)
+        this.commentCount++;
+        console.log(this.commentCount)
+      }
+    },
+    components: {
+      demoCommentList: CommentList,
+      demoNewComment: NewComment
+    }
+  }
 </script>
-
 <style>
 
 </style>
