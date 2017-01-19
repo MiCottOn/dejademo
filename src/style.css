@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box; 
+}
+
+/* Quick Reset
+============================================================== */
+ul, li, ol, h1, h2, h3, h4, h5, p, div, header, section, footer, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+    content:" ";
+    display:block;
+    clear:both;
+}
+/* Body
+============================================================== */
+body {
+  color: #34495e;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 100%;
+  background: #fafafa
+}
+
+a {
+  color: #34495e;
+}
+
+p {
+  line-height: 1.35;
+}
+
+/* Header
+============================================================== */
+header {
+  width: 100%;
+  height: 55px;
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+  padding: .5em 2em;
+  position: relative;
+}
+
+header h1, header nav {
+  position: absolute;
+}
+
+header nav {
+  right: 50px; 
+  top: 18px;
+}
+
+#header:after {
+  clear: both;
+}
+
+/* Container
+============================================================== */
+.container {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Create Post
+============================================================== */
+#create-post {
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
+}
+
+#post-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  outline: 0;
+  width: 525px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  padding: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+}
+
+#submit {
+  display: block;
+  -webkit-appearance: none;
+  outline: 0;
+  border: 0;
+  width: 70px;
+  height: 38px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  background: #4fc98d;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 32px;
+  border-radius: 3px;
+}
+
+#create-post:after {
+  clear: both;
+}
+/* Post List
+============================================================== */
+.post {
+  padding: 18px;
+  background: white;
+  border-top: 5px solid #34495e;
+  margin-bottom: 30px;
+}
+
+.post-option {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.post-option a {
+  color: #4fc08d;
+}
+
+.comments {
+  display: none;
+}
