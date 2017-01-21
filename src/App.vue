@@ -1,6 +1,6 @@
 <template>
   <div>
-    <demoHeader></demoHeader>
+    <demoHeader @clearPosts="clearPosts"></demoHeader>
     <div class="container">
       <demo-new-post @postAdded="newPost"></demo-new-post>
       <demo-post-list :posts="posts" :count="postCount"></demo-post-list>
@@ -23,8 +23,13 @@ export default {
   },
   methods: {
     newPost(post) {
+      if (post === '') return;
       this.posts.unshift(post);
       this.postCount++;
+    }, 
+    clearPosts() {
+      this.posts = [];
+      this.postCount = 0;
     }
   },
   components: {
