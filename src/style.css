@@ -59,6 +59,11 @@ header nav {
   top: 18px;
 }
 
+header nav li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
 #header:after {
   clear: both;
 }
