@@ -1,9 +1,9 @@
 <template>
   <header id="header">
-    <h1>DejaDemo</h1>
+    <h1><router-link to="/">DejaDemo</router-link></h1>
     <nav>
       <ul>
-        <li><a href="#">Profile</a></li>
+        <li><router-link to="/contact">Contact</router-link></li>
         <li><a href="#" @click="clearPosts">Clear Posts</a></li>
       </ul>
     </nav>

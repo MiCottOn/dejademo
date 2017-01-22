@@ -18,9 +18,9 @@
   export default {
     data: function() {
       return {
-        visible: false,
-        commentList: [],
-        commentCount: 0
+        visible: true,
+        commentList: ['This is A Comment'],
+        commentCount: 1
       }
     },
     props: ['comments'],

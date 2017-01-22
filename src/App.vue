@@ -17,8 +17,8 @@ export default {
   name: 'app',
   data: function() {
     return {
-      posts: [],
-      postCount: 0, 
+      posts: ['This is a Post', 'This is also a post'],
+      postCount: 2 
     }
   },
   methods: {

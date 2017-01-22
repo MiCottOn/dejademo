@@ -164,3 +164,49 @@ header nav li {
 .comment:nth-of-type(even) {
   background: #fafafa;
 }
+
+/* Contact Page 
+============================================================== */
+.contact {
+  margin: 30px;
+}
+
+form label, form input {
+  display: block;
+  width: 100%;
+}
+
+form input {
+  height: 40px;
+  outline: 0;
+  border: 0;
+  -webkit-appearance: none;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 14px;
+  font-family: "Source Sans Pro"
+}
+
+.half, .full {
+  margin-bottom: 1.5em;
+}
+
+.half {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+.half:nth-of-type(even) {
+  margin: 0;
+}
+
+form textarea {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border: 1px solid #eaeaea;
+  padding: 5px;
+  font-size: 14px;
+  font-family: "Source Sans Pro"
+}
