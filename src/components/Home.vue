@@ -22,10 +22,10 @@
         this.posts.unshift(post);
         this.postCount++;
       }, 
-      clearPosts() {
-        this.posts = [];
-        this.postCount = 0;
-      }
+      // clearPosts() {
+      //   this.posts = [];
+      //   this.postCount = 0;
+      // }
     },
     components: {
       demoPostList: PostList,

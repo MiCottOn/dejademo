@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import Post from './Post.vue';
+// import Post from './Post.vue';
   export default {
     props: ['posts', 'count'],
     components: {
-      demoPost: Post
+      // demoPost: Post
     }
   }
 </script>

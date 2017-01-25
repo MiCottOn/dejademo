@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <div id="create-comment" class="clearfix">
     <input type="text" class="comment-input" placeholder="Add your comment" v-model="comment" @keyup.enter="createNewComment">
   </div>  
@@ -18,4 +18,4 @@
       }
     }
   }
-</script>
+</script>-->

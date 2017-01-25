@@ -47,7 +47,7 @@ header {
   background: white;
   border-bottom: 1px solid #eaeaea;
   padding: .5em 2em;
-  position: relative;
+  position: fixed;
 }
 
 header h1, header nav {

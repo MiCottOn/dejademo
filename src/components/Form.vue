@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <div>
     <form action="" id="demo-form">
       <div class="full">
@@ -24,4 +24,4 @@
 </template>
 
 <script>
-</script>
+</script>-->
