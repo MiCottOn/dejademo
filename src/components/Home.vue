@@ -1,7 +1,7 @@
 <template>
   <div>
-   <demo-new-post @postAdded="newPost"></demo-new-post>
-   <demo-post-list :posts="posts" :count="postCount"></demo-post-list>
+   <NewPost @postAdded="newPost"></NewPost>
+   <PostList :posts="posts" :count="postCount"></PostList>
   </div>
 </template>
 <script>
@@ -13,23 +13,23 @@
     data: function() {
       return {
         posts: ['This is a Post', 'This is also a post'],
-        postCount: 2 
+        postCount: 2
       }
     },
     methods: {
-      newPost(post) {
+      newPost: function(post) {
         if (post === '') return;
         this.posts.unshift(post);
         this.postCount++;
-      }, 
-      clearPosts() {
+      },
+      clearPosts: function() {
         this.posts = [];
         this.postCount = 0;
       }
     },
     components: {
-      demoPostList: PostList,
-      demoNewPost: NewPost,
+      PostList: PostList,
+      NewPost: NewPost,
     }
   }
 </script>

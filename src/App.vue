@@ -1,9 +1,9 @@
 <template>
   <div>
-    <demoHeader @clearPosts="clearPosts"></demoHeader>
+    <DemoHeader @clearPosts="clearPosts"></DemoHeader>
     <div class="container">
-      <demo-new-post @postAdded="newPost"></demo-new-post>
-      <demo-post-list :posts="posts" :count="postCount"></demo-post-list>
+      <PostForm @postAdded="newPost"></PostForm>
+      <PostList :posts="posts" :count="postCount"></PostList>
     </div>
   </div>
 </template>
@@ -17,8 +17,8 @@ export default {
   name: 'app',
   data: function() {
     return {
-      posts: ['This is a Post', 'This is also a post'],
-      postCount: 2 
+      posts: ['This is a Post'],
+      postCount: 1
     }
   },
   methods: {
@@ -26,16 +26,16 @@ export default {
       if (post === '') return;
       this.posts.unshift(post);
       this.postCount++;
-    }, 
+    },
     clearPosts() {
       this.posts = [];
       this.postCount = 0;
     }
   },
   components: {
-    demoPostList: PostList,
-    demoNewPost: NewPost,
-    demoHeader: Header
+    PostList: PostList,
+    PostForm: NewPost,
+    DemoHeader: Header
   }
 }
 </script>

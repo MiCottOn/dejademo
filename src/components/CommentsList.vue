@@ -1,8 +1,8 @@
 <template>
   <div class="comments">
-    <demo-comment v-for="comment in comments">
+    <Comment v-for="comment in comments">
       {{comment}}
-    </demo-comment>
+    </Comment>
   </div>
 </template>
 
@@ -12,7 +12,7 @@
   export default {
     props: ['comments', 'commentcount'],
     components: {
-      demoComment: DemoComment,
+      Comment: DemoComment,
     }
   }
 </script>

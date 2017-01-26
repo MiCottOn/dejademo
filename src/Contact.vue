@@ -3,7 +3,7 @@
     <demoHeader></demoHeader>
     <div class="container">
       <h2 class="contact">Contact Form</h2>
-      <demoForm></demoForm>
+      <ContactForm></ContactForm>
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   name: 'Profile',
   components: {
     demoHeader: Header,
-    demoForm: Form
+    ContactForm: Form
   }
 }
 </script>

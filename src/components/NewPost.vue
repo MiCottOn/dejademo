@@ -14,7 +14,7 @@
       }
     },
     methods: {
-      createNew() {
+      createNew: function() {
         if (this.post === null) return false;
         else {
           this.$emit('postAdded', this.post);

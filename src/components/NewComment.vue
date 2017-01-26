@@ -12,7 +12,7 @@
       }
     },
     methods: {
-      createNewComment() {
+      createNewComment: function() {
         this.$emit('commentAdded', this.comment);
         this.comment = null;
       }

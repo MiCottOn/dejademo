@@ -5,10 +5,10 @@
       <a href="#" @click="showComments">Comments ({{commentCount}})</a>
     </div>
     <template v-if="visible">
-      <demo-comment-list :comments="commentList" :commentcount="commentCount"></demo-comment-list>
-      <demo-new-comment @commentAdded="newComment"></demo-new-comment>
+      <CommentList :comments="commentList" :commentcount="commentCount"></CommentList>
+      <CommentBox @commentAdded="newComment"></CommentBox>
     </template>
-  </div> 
+  </div>
 </template>
 
 <script>
@@ -19,25 +19,25 @@
     data: function() {
       return {
         visible: true,
-        commentList: ['This is A Comment'],
-        commentCount: 1
+        commentList: [],
+        commentCount: 0
       }
     },
     props: ['comments'],
     methods: {
-      showComments() {
+      showComments: function() {
         if (this.visible) this.visible = false;
         else this.visible = true
-      }, 
-      newComment(comment) {
+      },
+      newComment: function(comment) {
         this.commentList.push(comment)
         this.commentCount++;
         console.log(this.commentCount)
       }
     },
     components: {
-      demoCommentList: CommentList,
-      demoNewComment: NewComment
+      CommentList: CommentList,
+      CommentBox: NewComment
     }
   }
 </script>

@@ -12,7 +12,7 @@
 <script>
   export default {
     methods: {
-      clearPosts() {
+      clearPosts: function() {
         this.$emit('clearPosts')
       }
     }
