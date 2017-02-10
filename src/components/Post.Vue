@@ -30,7 +30,7 @@
         else this.visible = true
       },
       newComment: function(comment) {
-        this.commentList.push(comment)
+        this.commentList.unshift(comment)
         this.commentCount++;
         console.log(this.commentCount)
       }
