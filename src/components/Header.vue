@@ -4,7 +4,6 @@
     <nav>
       <ul>
         <li><router-link to="/contact">Contact</router-link></li>
-        <li><a href="#" @click="clearPosts">Clear Posts</a></li>
       </ul>
     </nav>
   </header>

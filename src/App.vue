@@ -17,7 +17,7 @@ export default {
   name: 'app',
   data: function() {
     return {
-      posts: ['This is a Post'],
+      posts: ['This is post #1'],
       postCount: 1
     }
   },
